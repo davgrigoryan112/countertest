@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test test 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-bczRLJ byJfrz"
+    >
+      <button
+        class="sc-gsnTZi jrQkrj"
+        id="increment"
+      >
+        <span>
+          +1
+        </span>
+      </button>
+      <div
+        class="sc-dkzDqf lhZAug"
+        id="count"
+      >
+        0
+      </div>
+      <button
+        class="sc-gsnTZi jrQkrj"
+        id="decrement"
+      >
+        <span>
+          -1
+        </span>
+      </button>
+    </div>
+  </div>
+</body>
+`;
