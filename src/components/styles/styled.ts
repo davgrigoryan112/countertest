@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-
+import styled from 'styled-components'
 
 export const MainContainer = styled.div`
   margin: 0;
@@ -33,19 +31,19 @@ export const Button = styled.button`
   background-color: #ffffff;
   overflow: visible;
   border-radius: 24px;
-  
- span {
-   flex-shrink: 0;
-   width: auto;
-   height: auto;
-   white-space: pre;
-   font-weight: 700;
-   font-family: "Inter-Bold", "Inter", sans-serif;
-   color: #000000;
-   font-size: 24px;
-   line-height: 1.2;
- }
-  &:active{
+
+  span {
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    white-space: pre;
+    font-weight: 700;
+    font-family: 'Inter-Bold', 'Inter', sans-serif;
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  &:active {
     background-color: lightgray;
   }
   @media (min-width: 650px) {
@@ -54,7 +52,7 @@ export const Button = styled.button`
       cursor: pointer;
     }
   }
-`;
+`
 
 export const CountContainer = styled.div`
   flex-shrink: 0;
@@ -64,7 +62,7 @@ export const CountContainer = styled.div`
   word-wrap: break-word;
   word-break: break-word;
   font-weight: 700;
-  font-family: "Inter-Bold", "Inter", sans-serif;
+  font-family: 'Inter-Bold', 'Inter', sans-serif;
   color: #8cd6bd;
   font-size: 64px;
   line-height: 1.2;

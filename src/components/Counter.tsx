@@ -1,34 +1,32 @@
-import * as React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {FC} from "react";
+import * as React from 'react'
+import { FC } from 'react'
 
-import { Button, CountContainer, MainContainer } from "./styles/styled";
-import {
-    incrementCounter,
-    decrementCounter
-} from "../store/Counter/";
-import { RootState } from "../store";
+import { Button, CountContainer, MainContainer } from './styles/styled'
+import { increment, decrement } from '../store/Counter'
+import { useAppDispatch, useAppSelector } from '../hooks/hooks'
 
 const Counter: FC = () => {
+  const count = useAppSelector((state) => state.count)
+  const dispatch = useAppDispatch()
 
-    const count = useSelector( (state: RootState ) => state.count)
-    const dispatch = useDispatch()
+  const onIncrement = () => {
+    dispatch(increment())
+  }
+  const onDecrement = () => {
+    dispatch(decrement())
+  }
 
-    const onIncrement = () => {
-        dispatch(incrementCounter())
-    }
-    const onDecrement = () => {
-        dispatch(decrementCounter())
-    }
+  return (
+    <MainContainer>
+      <Button id="increment" onClick={onIncrement}>
+        <span>+1</span>
+      </Button>
+      <CountContainer id="count">{count.count}</CountContainer>
+      <Button id="decrement" onClick={onDecrement}>
+        <span>-1</span>
+      </Button>
+    </MainContainer>
+  )
+}
 
-    return (
-        <MainContainer>
-            <Button id='increment' onClick={onIncrement}><span>+1</span></Button>
-            <CountContainer id='count'>{count.count}</CountContainer>
-            <Button id='decrement' onClick={onDecrement}><span>-1</span></Button>
-        </MainContainer>
-    );
-};
-
-
-export default Counter;
+export default Counter

@@ -1,20 +1,18 @@
-import { combineReducers, compose } from "redux";
+import { combineReducers, compose } from 'redux'
 import { configureStore } from '@reduxjs/toolkit'
-import count from "./Counter/reducer";
-import { CounterState } from "./Counter/types";
+import counterReducer from './Counter/counterSlice'
+import { CounterState } from './Counter/types'
 
 const reducers = combineReducers({
-    count
-});
+  count: counterReducer
+})
 
-
-export interface RootState {
-    count: CounterState;
-}
+export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>
 
 const composeEnhancers =
-    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = configureStore({ reducer: reducers, enhancers: composeEnhancers })
 
-export default store;
+export default store
