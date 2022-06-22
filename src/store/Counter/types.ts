@@ -1,3 +1,3 @@
-export interface CounterState {
+export type CounterState = {
   count: number
 }

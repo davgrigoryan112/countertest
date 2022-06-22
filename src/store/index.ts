@@ -10,8 +10,7 @@ const reducers = combineReducers({
 export type AppDispatch = typeof store.dispatch
 export type RootState = ReturnType<typeof store.getState>
 
-const composeEnhancers =
-  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = configureStore({ reducer: reducers, enhancers: composeEnhancers })
 

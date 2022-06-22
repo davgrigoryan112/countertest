@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import { Button, CountContainer, MainContainer } from './styles/styled'
 import { increment, decrement } from '../store/Counter'
